@@ -1,0 +1,3 @@
+pytube==15.0.0
+xrpl-py==1.8.0
+requests==2.31.0
