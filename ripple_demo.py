@@ -4,7 +4,7 @@ from xrpl.core.keypairs import generate_seed
 from xrpl.transaction import safe_sign_and_autofill_transaction, send_reliable_submission
 from xrpl.models.transactions.nftoken_mint import NFTokenMint, NFTokenMintFlag
 from xrpl.utils import str_to_hex, hex_to_str
-from xrpl.wallet import generate_faucet_wallet, Wallet
+from xrpl.wallet import Wallet
 from xrpl.models.requests import AccountNFTs
 from xrpl.clients import JsonRpcClient
 
@@ -14,15 +14,18 @@ xrp_client = JsonRpcClient(TESTNET_RPC_URL)
 # Let's create a prefunded test account
 issuer_wallet = Wallet(seed=generate_seed("deepinkventures!"), sequence=0)
 
-# this will fund the wallet, if you run out of assets, uncomment and run once
+# this will fund the wallet, if you run out of assets, uncomment and run once:
+
+# from xrpl.wallet import generate_faucet_wallet
 # generate_faucet_wallet(xrp_client, issuer_wallet)
 
-# Construct NFTokenMint transaction to mint 1 NFT
+# Create the tx to mint an nft
 mint_tx = NFTokenMint(
     account=issuer_wallet.classic_address,
+    # this should be a global incrementor per client, the demo will only have one client
     nftoken_taxon=randint(1, 1000000000),
-    flags=NFTokenMintFlag.TF_TRANSFERABLE,
-    uri=str_to_hex("https://deep-ink.ventures")
+    # this should be the url from ipfs_demo
+    uri=str_to_hex("https://bafkreia3dyfpr4yzyb3x2xizaiorvulrkjqmnrliuzs434ny7rqzmhm3na.ipfs.nftstorage.link")
 )
 
 # Sign mint_tx using the issuer account

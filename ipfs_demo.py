@@ -3,6 +3,7 @@ from io import StringIO
 
 import requests
 
+# Our account at https://nft.storage/files/, obviously this should go to env
 API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDJmRjJFQWQwN2VENTYzY0FCY0I2OTM3MTM3NGJBYTFGNzEzMjYzQTAiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY4NTcwODIzMDMwOSwibmFtZSI6IkRlbW8ifQ.Kz5OJga-Eg6YoHueWY5nWYLeETJUD6r6YLrxfoaE610"
 
 meta_file = StringIO()
