@@ -5,11 +5,9 @@ from typing import List
 import requests
 from django.conf import settings
 from xrpl.clients import JsonRpcClient
-from xrpl.core.keypairs import generate_seed
 from xrpl.models import NFTokenMint
 from xrpl.transaction import safe_sign_and_autofill_transaction, send_reliable_submission
 from xrpl.utils import str_to_hex
-from collections import defaultdict
 
 from core.models import Content, NFT
 from user.models import User
@@ -17,17 +15,6 @@ from user.models import User
 
 def get_client():
     return JsonRpcClient(settings.XRP_RPC_URL)
-
-
-def sync_all_nfts():
-    by_user = defaultdict(list)
-    for content in Content.objects.filter(nft__isnull=True).prefetch_related('user'):
-        by_user[content.user].append(content)
-
-    client = get_client()
-    for user, content_list in by_user.items():
-        nft_sync = NFTSync(user, content_list, client)
-        nft_sync.sync()
 
 
 class NFTSync:
