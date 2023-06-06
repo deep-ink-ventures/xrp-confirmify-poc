@@ -95,6 +95,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+APPEND_SLASH = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -234,4 +236,5 @@ DASHBOARD_URL = os.environ.get('DASHBOARD_URL', 'https://deep-ink.ventures')
 BASE_URL = os.environ.get('BASE_URL', 'https://deep-ink.ventures')
 
 NFT_STORAGE_API_KEY = os.environ.get('NFT_STORAGE_API_KEY')
-XRP_RPC_URL = "https://s.altnet.rippletest.net:51234/"
+XRP_RPC_URL = os.environ.get('XRP_RPC_URL', "https://s.altnet.rippletest.net:51234/")
+NETWORK_EXPLORER_URL = os.environ.get('NETWORK_EXPLORER_URL', 'https://testnet.xrpl.org')

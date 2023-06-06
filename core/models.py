@@ -5,6 +5,7 @@ from io import StringIO
 import requests
 from django.db import models
 
+from service import settings
 from user.models import User
 
 
@@ -39,6 +40,9 @@ class NFT(models.Model):
     token_id = models.CharField(unique=True, max_length=256)
     minting_tx = models.CharField(max_length=256)
     uri = models.URLField()
+
+    def get_minting_url(self):
+        return f'{settings.NETWORK_EXPLORER_URL}/transactions/{self.minting_tx}'
 
     def get_metadata(self):
         return requests.get(self.uri).json()

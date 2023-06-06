@@ -28,7 +28,7 @@ class Command(BaseCommand):
                 current_count = NFT.objects.count()
                 sync_all_nfts()
                 new_count = NFT.objects.count()
-                print(f"Minted {new_count} NFT(s) ...\n")
-            except Exception:
-                pass
+                print(f"Minted {new_count - current_count} NFT(s) ...\n")
+            except Exception as exc:
+                print(exc)
             sleep(5)

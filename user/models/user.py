@@ -14,6 +14,9 @@ class BaseUserManagerExtended(UserManager):
     def get_by_natural_key(self, username):
         return self.get(**{self.model.USERNAME_FIELD: username.lower()})
 
+    def create_superuser(self, email=None, password=None, **extra_fields):
+        return super().create_superuser(email, email, password, **extra_fields)
+
 
 class User(AbstractUser):
 
