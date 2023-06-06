@@ -8,9 +8,10 @@ from core.models import Content, NFT
 from core.ripple import get_client, NFTSync
 
 
-def sync_all_nfts():
+def sync_all_nfts(queryset=None):
+    queryset = queryset or Content.objects.all()
     by_user = defaultdict(list)
-    for content in Content.objects.filter(nft__isnull=True).prefetch_related('user'):
+    for content in queryset.filter(nft__isnull=True).prefetch_related('user'):
         by_user[content.user].append(content)
 
     client = get_client()

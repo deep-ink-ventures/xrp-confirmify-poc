@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 
+from core.management.commands.mint_nfts import sync_all_nfts
 from core.models import Content, NFT
 
 admin.site.site_header = 'Confirmify'
@@ -10,15 +11,17 @@ admin.site.site_header = 'Confirmify'
 
 @admin.register(Content)
 class ContentAdmin(admin.ModelAdmin):
-    list_display = ["checksum", 'user', 'source']
+    def create_nft(self, request, queryset):
+        sync_all_nfts(queryset)
+        self.message_user(request, 'Ok. Creating NFTs.')
+
+    list_display = ["checksum", 'user', 'source', 'nft']
+    actions = [create_nft]
 
     list_filter = ["user", ]
     readonly_fields = ["checksum"]
 
     search_fields = ["checksum"]
-
-    def has_delete_permission(self, request, obj=None):
-        return False
 
 
 def get_nft_url(nft):
