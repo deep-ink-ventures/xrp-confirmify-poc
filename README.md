@@ -102,8 +102,11 @@ Visit [localhost:8000](http://localhost:8000/) to view a rudimentary interface.
 Another useful command is a background worker that you can ignite with `./manage.py mint_nfts`. It observes content that are submitted to the API and mints corresponding
 NFTs on the XRP ledger.
 
+### Resources
 
+We have already created a brand guide, mockups and designs. Review them [here](https://drive.google.com/file/d/1vftwT-Bx_jiu1xau6Row-ifjVEb0SgP4/view)!
 
+We have created a chrome extension to test this in action. Check it out [here](https://github.com/deep-ink-ventures/xrp-confirmify-ext)!
 
 
 
