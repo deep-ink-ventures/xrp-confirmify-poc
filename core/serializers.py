@@ -10,7 +10,7 @@ class ContentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Content
-        fields = ('id', 'binary', 'checksum', 'source')
+        fields = ('id', 'binary', 'checksum', 'source', 'user')
         read_only_fields = ('id', 'checksum', 'source')
 
 

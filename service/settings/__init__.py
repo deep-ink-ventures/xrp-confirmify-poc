@@ -232,3 +232,6 @@ AUTH_USER_MODEL = 'user.User'
 FRONT_URL = os.environ.get('FRONT_URL', 'https://deep-ink.ventures')
 DASHBOARD_URL = os.environ.get('DASHBOARD_URL', 'https://deep-ink.ventures')
 BASE_URL = os.environ.get('BASE_URL', 'https://deep-ink.ventures')
+
+NFT_STORAGE_API_KEY = os.environ.get('NFT_STORAGE_API_KEY')
+XRP_RPC_URL = "https://s.altnet.rippletest.net:51234/"
