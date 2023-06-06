@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  db:
+    image: postgres:latest
+    ports:
+      - "5496:5432"
+    environment:
+      - POSTGRES_DB=core
+      - POSTGRES_PASSWORD=secret
+  cache:
+    image: redis:latest
+    ports:
+      - "6365:6379"
