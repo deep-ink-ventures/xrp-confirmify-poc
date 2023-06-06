@@ -1,8 +1,9 @@
 <br/>
 <p align="center">
-  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/c6256b39-ddc9-4db2-87d3-398ac4e45015">
+  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/3a00fbdb-ba5b-4938-883e-a6b9eee4bfe5">
   <i>A proof of authenticity protocol on the XRP Ledger</i>
 </p>
+
 
 <br /><br />
 
