@@ -21,8 +21,13 @@ class ContentAdmin(admin.ModelAdmin):
         return False
 
 
+def get_nft_url(nft):
+    return mark_safe(f'<a target="_blank" href="{nft.get_nft_url()}">Link</a>')
+get_nft_url.short_description = 'Explorer'
+
+
 def get_mint_tx(nft):
-    return mark_safe(f'<a target="_blank" href="{nft.get_minting_url()}">Minting TX</a>')
+    return mark_safe(f'<a target="_blank" href="{nft.get_minting_url()}">Link</a>')
 get_mint_tx.short_description = 'Mint TX'
 
 
@@ -33,7 +38,7 @@ get_uri.short_description = 'Metadata'
 
 @admin.register(NFT)
 class NFTAdmin(admin.ModelAdmin):
-    list_display = ["id", get_uri, 'content', get_mint_tx]
+    list_display = ["id", get_uri, 'content', get_nft_url, get_mint_tx]
 
     readonly_fields = ["token_id", "uri"]
     search_fields = ["content__checksum", 'uri']

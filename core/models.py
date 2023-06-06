@@ -44,6 +44,9 @@ class NFT(models.Model):
     def get_minting_url(self):
         return f'{settings.NETWORK_EXPLORER_URL}/transactions/{self.minting_tx}'
 
+    def get_nft_url(self):
+        return f'{settings.NETWORK_EXPLORER_URL}/nft/{self.token_id}'
+
     def get_metadata(self):
         return requests.get(self.uri).json()
 

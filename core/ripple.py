@@ -59,7 +59,6 @@ class NFTSync:
         mint_tx = NFTokenMint(
             account=self.wallet.classic_address,
             nftoken_taxon=incrementor,
-            # this is the json file on IPFS
             uri=str_to_hex(uri)
         )
 
