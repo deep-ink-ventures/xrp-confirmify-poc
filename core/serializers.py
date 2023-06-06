@@ -15,6 +15,12 @@ class ContentSerializer(serializers.ModelSerializer):
 
 
 class NFTSerializer(serializers.ModelSerializer):
+    metadata = serializers.SerializerMethodField()
+
+    @staticmethod
+    def get_metadata(nft: NFT):
+        return nft.get_metadata()
+
     class Meta:
         model = NFT
-        fields = ('id', 'content', 'token_id', 'minting_tx')
+        fields = ('id', 'content', 'token_id', 'minting_tx', 'metadata')

@@ -4,6 +4,7 @@ from io import BytesIO
 from pytube import YouTube
 
 with BytesIO() as tmp_file:
+    YouTube("https://www.youtube.com/watch?v=ui7f4OQkMgU").streams.first().download('youtube.mp4')
     YouTube("https://www.youtube.com/watch?v=ui7f4OQkMgU").streams.first().stream_to_buffer(tmp_file)
 
     # sha256 hash of the file

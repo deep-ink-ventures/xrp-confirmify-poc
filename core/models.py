@@ -8,6 +8,12 @@ from django.db import models
 from user.models import User
 
 
+def content_checksum(binary):
+    m = hashlib.sha256()
+    m.update(binary)
+    return m.hexdigest()
+
+
 class Content(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     binary = models.FileField()
@@ -18,9 +24,7 @@ class Content(models.Model):
     ), max_length=8, default='RAW')
 
     def get_checksum(self):
-        m = hashlib.sha256()
-        m.update(self.binary.read())
-        return m.hexdigest()
+        return content_checksum(self.binary.read())
 
     def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
         self.checksum = self.get_checksum()
