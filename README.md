@@ -1,3 +1,4 @@
+<br/>
 <p align="center">
   <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/c6256b39-ddc9-4db2-87d3-398ac4e45015">
   <i>A proof of authenticity protocol on the XRP Ledger</i>
@@ -19,18 +20,21 @@ We propose a solution to this escalating problem - a publishing pipeline applica
 
 This innovation allows consumers, ranging from journalists to social media platforms, to confirm the authenticity of content they encounter. Whether it's a video trending on Twitter or an article shared on Facebook, our application ensures that the content is genuine and originated from a verified source.
 
+<br/>
 <p align="center">
   <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/adec9d07-2b2e-4497-be99-19c1d5c0c111">
 </p><br />
 
 At the heart of our platform is a novel application of blockchain technology, specifically Non-Fungible Tokens (NFTs). Each piece of published content is associated with an NFT, which references structured metadata that prominently includes a checksum of the published data. Through an easy-to-use API, consumers can instantly verify the authenticity of any content.
 
+<br/>
 <p align="center">
   <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/ddd0eccf-9152-407c-81b0-cd3420fd097b">
 </p><br />
 
 Although the underlying blockchain technology is complex, its application remains hidden under the hood of our platform. It serves as the backbone of our system, ensuring a tamper-proof protocol for verifying authenticity.
 
+<br/>
 <p align="center">
   <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/33834153-ac21-44a6-b357-b9a77cda2bfb">
 </p><br />
@@ -52,6 +56,7 @@ NFTs natively available on the protocol level facilitates a scalable authenticat
 
 The rapid transaction confirmation time enables swift authentication and verification of content, which is critical for mitigating the spread of fraudulent digital media.
 
+<br/>
 <p align="center">
   <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/f972717d-bffd-4d50-8031-a8cee5285ba6">
 </p><br />
