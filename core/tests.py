@@ -5,7 +5,7 @@ from django.urls import reverse
 from pytube import YouTube
 
 from core.models import Content, NFT
-from core.management.commands.sync_nfts import sync_all_nfts
+from core.management.commands.mint_nfts import sync_all_nfts
 from core.utils.test_utils import B64_IMAGE
 from user.tests import UserAwareTestCase
 
