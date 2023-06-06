@@ -60,17 +60,44 @@ We want to build a web2 experience with everyday users mainly unaware of blockch
 
 Ripple is the right tool for this job, with the key components of our requirements list being baked directly into the ledger.
 
-## About us
+## Setting up
 
-<p align="center">
-  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/2a40d0f4-36b2-495b-8c42-38e66e217715">
-</p><br />
+This repository uses the [Django Webframework](https://www.djangoproject.com/) alongside with [a few](https://github.com/deep-ink-ventures/xrp-confirmify-poc/blob/main/requirements.txt) python libraries such as xrpl-py.
 
-At Deep Ink Ventures, we are driven by a profound commitment to fostering trust in the digital world. As an incubator and agency, we immerse ourselves deeply in start-ups, helping them shape their vision and build their products from the ground up. Just as ink permeates the pages of a book, we write ourselves deeply into the DNA of the start-ups we work with, leaving a lasting impact.
+The installation should be straightforward if you are a pythonista and reasonably straightforward if not :-).
 
-We understand the challenges and complexities that arise in today's rapidly evolving digital landscape. The proliferation of fabricated content and the erosion of trust pose significant obstacles for businesses and consumers alike. That's why we have made it our mission to empower start-ups to navigate this landscape with confidence, integrity, and authenticity.
+### Setting up the environment
 
-Our team of dedicated professionals combines expertise in technology, business strategy, and design to guide start-ups through every step of their journey. We don't just provide solutions; we become trusted partners, working hand in hand to develop and execute innovative strategies that stand the test of time.
+Make sure you have at least python 3.11 installed, create a virtual environment if you do and activate it. Afterwards you can install the requirements.
+
+```sh
+python3 --version
+python3 -m venv venv
+source venv/bin/activate
+pip install - requirements.txt
+```
+
+Next up we need to fire up a database and a cache and the easiest no-config way of doing this is to use [docker](https://www.docker.com/). The [docker-compose](https://github.com/deep-ink-ventures/xrp-confirmify-poc/blob/main/docker-compose.yml) file is setup to work with the defaults in djangos settings.
+
+```sh
+docker compose up -d
+```
+
+Almost there. We now can create the initial migrations and run a server.
+
+```sh
+./manage.py makemigrations
+./manage.py runserver
+```
+
+Visit [localhost:8000](http://localhost:8000/) to view a rudimentary interface.
+
+> The command `./manage.py createsuperuser` let's you setup an admin here.
+
+Another useful command is a background worker that you can ignite with `./manage.py mint_nfts`. It observes content that are submitted to the API and mints corresponding
+NFTs on the XRP ledger.
+
+
 
 
 
