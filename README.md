@@ -23,21 +23,22 @@ This innovation allows consumers, ranging from journalists to social media platf
 
 <br/>
 <p align="center">
-  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/adec9d07-2b2e-4497-be99-19c1d5c0c111">
+  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/7bb687f5-a520-4f4a-8df3-1887ad58f634">
 </p><br />
+
 
 At the heart of our platform is a novel application of blockchain technology, specifically Non-Fungible Tokens (NFTs). Each piece of published content is associated with an NFT, which references structured metadata that prominently includes a checksum of the published data. Through an easy-to-use API, consumers can instantly verify the authenticity of any content.
 
 <br/>
 <p align="center">
-  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/ddd0eccf-9152-407c-81b0-cd3420fd097b">
+  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/7ea1e0e9-6d86-41c2-8016-69386a457044">
 </p><br />
 
 Although the underlying blockchain technology is complex, its application remains hidden under the hood of our platform. It serves as the backbone of our system, ensuring a tamper-proof protocol for verifying authenticity.
 
 <br/>
 <p align="center">
-  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/33834153-ac21-44a6-b357-b9a77cda2bfb">
+  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/3a8a4e18-aba8-4fc5-87b7-f9c6a8fcc952">
 </p><br />
 
 Our application isn't just about verifying content; it's about restoring trust in the digital age, providing the tools necessary to separate fact from fiction in a world where artificial intelligence has blurred the line between reality and counterfeit.
@@ -59,7 +60,7 @@ The rapid transaction confirmation time enables swift authentication and verific
 
 <br/>
 <p align="center">
-  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/f972717d-bffd-4d50-8031-a8cee5285ba6">
+  <img src="https://github.com/deep-ink-ventures/xrp-confirmify-poc/assets/120174523/fd13d870-d6b1-401d-ad00-74a17e86da9e">
 </p><br />
 
 We want to build a web2 experience with everyday users mainly unaware of blockchain technology being a key part of the underlying infrastructure. 
