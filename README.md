@@ -101,7 +101,7 @@ Visit [localhost:8000](http://localhost:8000/) to view a rudimentary interface.
 
 > The command `./manage.py createsuperuser` let's you setup an admin here.
 
-Another useful command is a background worker that you can ignite with `./manage.py mint_nfts`. It observes content that are submitted to the API and mints corresponding
+Another useful command is a background worker that you can ignite with `./manage.py mint_nfts`. It observes content that is submitted to the API and mints corresponding
 NFTs on the XRP ledger.
 
 ### Resources
